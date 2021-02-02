@@ -2,6 +2,8 @@ import './_vars';
 import {resizeContent} from './functions/resize';
 import {scrollTo} from './functions/smooth-scroll';
 import {disableScroll, enableScroll} from './functions/stop-scroll';
+import '../../node_modules/lightgallery.js/lib/js/lightgallery';
+import '../../node_modules/lg-video.js/dist/lg-video';
 
 
 window.onload = function() {
@@ -16,4 +18,7 @@ window.onload = function() {
   navClose.addEventListener('click', () => {
       nav.classList.remove('nav--visible');
   });
+
+  lightGallery(document.getElementById('lightgallery'));
+  lightGallery(document.getElementById('video-gallery'));
 }
